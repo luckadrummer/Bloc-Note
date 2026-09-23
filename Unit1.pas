@@ -1,0 +1,319 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, StdCtrls, ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    MainMenu1: TMainMenu;
+    Modifier1: TMenuItem;
+    Couper1: TMenuItem;
+    Coller1: TMenuItem;
+    Coipier1: TMenuItem;
+    Supp1: TMenuItem;
+    Quitter1: TMenuItem;
+    Quitter2: TMenuItem;
+    Police2: TMenuItem;
+    Couleur2: TMenuItem;
+    ailledePolice1: TMenuItem;
+    Couleur3: TMenuItem;
+    Fond1: TMenuItem;
+    Memo1: TMemo;
+    Selectionner1: TMenuItem;
+    GRas1: TMenuItem;
+    Gras2: TMenuItem;
+    Italique1: TMenuItem;
+    N81: TMenuItem;
+    N121: TMenuItem;
+    N161: TMenuItem;
+    N202: TMenuItem;
+    Rouge1: TMenuItem;
+    Jaune1: TMenuItem;
+    Vert1: TMenuItem;
+    Bleu1: TMenuItem;
+    Violet1: TMenuItem;
+    Noir1: TMenuItem;
+    Blanc1: TMenuItem;
+    Standard1: TMenuItem;
+    Rouge2: TMenuItem;
+    Jaune2: TMenuItem;
+    Vert2: TMenuItem;
+    Noir2: TMenuItem;
+    NewRoman1: TMenuItem;
+    Calibri1: TMenuItem;
+    Jokker1: TMenuItem;
+    Normal1: TMenuItem;
+    N101: TMenuItem;
+    N141: TMenuItem;
+    N401: TMenuItem;
+    Fichier1: TMenuItem;
+    Nouveau1: TMenuItem;
+    Ouvrir1: TMenuItem;
+    Enregistrersous1: TMenuItem;
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
+    Enregistrer1: TMenuItem;
+    Panel1: TPanel;
+    procedure FormCreate(Sender: TObject);
+    procedure Quitter2Click(Sender: TObject);
+    procedure Selectionner1Click(Sender: TObject);
+    procedure Couper1Click(Sender: TObject);
+    procedure Coller1Click(Sender: TObject);
+    procedure Coipier1Click(Sender: TObject);
+    procedure Supp1Click(Sender: TObject);
+    procedure NewRoman1Click(Sender: TObject);
+    procedure Calibri1Click(Sender: TObject);
+    procedure Jokker1Click(Sender: TObject);
+    procedure N202Click(Sender: TObject);
+    procedure N81Click(Sender: TObject);
+    procedure N121Click(Sender: TObject);
+    procedure N161Click(Sender: TObject);
+    procedure GRas1Click(Sender: TObject);
+    procedure Gras2Click(Sender: TObject);
+    procedure Normal1Click(Sender: TObject);
+    procedure Italique1Click(Sender: TObject);
+    procedure Rouge1Click(Sender: TObject);
+    procedure Jaune1Click(Sender: TObject);
+    procedure Vert1Click(Sender: TObject);
+    procedure Bleu1Click(Sender: TObject);
+    procedure Violet1Click(Sender: TObject);
+    procedure Noir1Click(Sender: TObject);
+    procedure Blanc1Click(Sender: TObject);
+    procedure Standard1Click(Sender: TObject);
+    procedure Rouge2Click(Sender: TObject);
+    procedure Jaune2Click(Sender: TObject);
+    procedure Vert2Click(Sender: TObject);
+    procedure Noir2Click(Sender: TObject);
+    procedure N101Click(Sender: TObject);
+    procedure N141Click(Sender: TObject);
+    procedure N401Click(Sender: TObject);
+//    procedure Memo1Change(Sender: TObject);
+    procedure Nouveau1Click(Sender: TObject);
+//    procedure Enregistrer1Click(Sender: TObject);
+    procedure Enregistrersous1Click(Sender: TObject);
+    procedure Ouvrir1Click(Sender: TObject);
+    procedure Enregistrer1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  Nmf : string;  //Nmf : Nom du Fichier
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+memo1.Clear;
+end;
+
+procedure TForm1.Quitter2Click(Sender: TObject);
+begin
+                  Application.Terminate;
+end;
+
+procedure TForm1.Selectionner1Click(Sender: TObject);
+begin
+Memo1.SelectAll;
+end;
+
+procedure TForm1.Couper1Click(Sender: TObject);
+begin
+    Memo1.CutToClipboard;
+end;
+
+procedure TForm1.Coller1Click(Sender: TObject);
+begin
+    Memo1.PasteFromClipboard;
+end;
+
+procedure TForm1.Coipier1Click(Sender: TObject);
+begin
+     Memo1.CopyToClipboard;
+end;
+
+procedure TForm1.Supp1Click(Sender: TObject);
+begin
+    Memo1.ClearSelection;
+end;
+
+procedure TForm1.NewRoman1Click(Sender: TObject);
+begin
+    Memo1.Font.Name := 'Times New Roman';
+end;
+
+procedure TForm1.Calibri1Click(Sender: TObject);
+begin
+     Memo1.Font.Name := 'Calibri';
+end;
+
+procedure TForm1.Jokker1Click(Sender: TObject);
+begin
+    Memo1.Font.Name := 'Arial';
+end;
+
+procedure TForm1.N202Click(Sender: TObject);
+begin
+     Memo1.Font.size := 20;
+end;
+
+procedure TForm1.N81Click(Sender: TObject);
+begin
+      Memo1.Font.size := 8;
+end;
+
+procedure TForm1.N121Click(Sender: TObject);
+begin
+     Memo1.Font.size := 12;
+end;
+
+procedure TForm1.N161Click(Sender: TObject);
+begin
+     Memo1.Font.size := 16;
+end;
+
+procedure TForm1.GRas1Click(Sender: TObject);
+begin
+    Memo1.Font.Style := [fsUnderLine]; 
+end;
+
+procedure TForm1.Gras2Click(Sender: TObject);
+begin
+    Memo1.Font.Style := [fsBold];
+end;
+
+procedure TForm1.Normal1Click(Sender: TObject);
+begin
+ Memo1.Font.Style := [];
+end;
+
+procedure TForm1.Italique1Click(Sender: TObject);
+begin
+    Memo1.Font.Style := [fsItalic];
+end;
+
+procedure TForm1.Rouge1Click(Sender: TObject);
+begin
+  Memo1.Font.Color := clRed;
+end;
+
+procedure TForm1.Jaune1Click(Sender: TObject);
+begin
+   Memo1.Font.Color := clYellow;
+end;
+
+procedure TForm1.Vert1Click(Sender: TObject);
+begin
+    Memo1.Font.Color := clGreen;
+end;
+
+procedure TForm1.Bleu1Click(Sender: TObject);
+begin
+   Memo1.Font.Color := clBlue;
+end;
+
+procedure TForm1.Violet1Click(Sender: TObject);
+begin
+   Memo1.Font.Color := clPurple;
+end;
+
+
+
+procedure TForm1.Noir1Click(Sender: TObject);
+begin
+    Memo1.Font.Color := clBlack;
+end;
+
+procedure TForm1.Blanc1Click(Sender: TObject);
+begin
+    Memo1.Font.Color := clWhite;
+end;
+
+procedure TForm1.Standard1Click(Sender: TObject);
+begin
+    Memo1.Color:= clWhite;
+end;
+
+procedure TForm1.Rouge2Click(Sender: TObject);
+begin
+    Memo1.Color:= clRed;
+end;
+
+procedure TForm1.Jaune2Click(Sender: TObject);
+begin
+   Memo1.Color:= clYellow;
+end;
+
+procedure TForm1.Vert2Click(Sender: TObject);
+begin
+    Memo1.Color:= clGreen;
+end;
+
+procedure TForm1.Noir2Click(Sender: TObject);
+begin
+    Memo1.Color:= clBlack;
+end;
+
+procedure TForm1.N101Click(Sender: TObject);
+begin
+   Memo1.Font.size := 10;
+end;
+
+procedure TForm1.N141Click(Sender: TObject);
+begin
+Memo1.Font.size := 14;
+end;
+
+procedure TForm1.N401Click(Sender: TObject);
+begin
+Memo1.Font.size := 40;
+end;
+
+
+procedure TForm1.Nouveau1Click(Sender: TObject);
+begin
+Memo1.Clear;
+
+end;
+
+procedure TForm1.Enregistrersous1Click(Sender: TObject);
+begin
+   if SaveDialog1.Execute then
+    begin
+      Memo1.Lines.SaveToFile(SaveDialog1.FileName);
+    end;
+end;
+
+procedure TForm1.Ouvrir1Click(Sender: TObject);
+begin
+     if OpenDialog1.Execute then
+    begin
+      Memo1.Lines.LoadFromFile(OpenDialog1.FileName);
+    end;
+end;
+
+procedure TForm1.Enregistrer1Click(Sender: TObject);
+begin
+    if Nmf = '' then
+      begin
+         if SaveDialog1.Execute then
+            begin
+                Nmf := SaveDialog1.FileName;
+                Memo1.Lines.SaveToFile(SaveDialog1.FileName);
+            end;
+      end
+        else
+            begin
+                Memo1.Lines.SaveToFile(Nmf);
+            end;
+end;
+
+End.
